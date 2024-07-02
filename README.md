@@ -1,4 +1,4 @@
-# Predicting the amount of energy required to maintain a comfortable indoor temperature during both hot and cold weather seasons. 
+# Predicting whether or not a structure is energy efficient during both hot and cold weather seasons based on measurable features in the data. 
 
 by Jim O'Donnell
 
