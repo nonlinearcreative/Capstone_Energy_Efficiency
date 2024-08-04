@@ -1,9 +1,12 @@
-# Predicting whether or not a structure is energy efficient during both hot and cold weather seasons based on measurable features in the data. 
+# Predicting whether or not a structure is energy efficient based on features in the data. 
+
+
 
 by Jim O'Donnell
 
 #### Capstone project analyzing energy efficiency of residential buildings. 
 
+#### Executive Summary: 
 
 
 ## Rationale
@@ -15,6 +18,45 @@ Will the model be able to accurately rate a real-world structure using a binary 
 ## Data Sources:
 https://www.kaggle.com/datasets/ujjwalchowdhury/energy-efficiency-data-set/data
 
+## Goals: 
+To produce a low friction end-user interface which takes manual entry of available data features, runs the input through two algorithms, makes predictions of the targets, and finally classifies the entry as either efficient or inefficient for both heating as well as cooling loads based on the input data. The interface must be simple enough for anyone to use.  
+
+## Findings: 
+The study took a two-phased approach by first defining two separate target features, heating and cooling load, analyzing them as two separate studies, and developing models to both predict heating and cooling loads as well as a binary classification of 'efficient' or 'inefficient' based on the input data. 
+
+## Scores: 
+The mean cross-validated score for heating load prediction using Random Forests: 0.9973197960731153
+The mean cross-validated score for cooling load prediction using Random Forests: 0.9676260412022117
+
+The mean cross-validated score for heating efficiency classification using Logistic Regression: 0.9837265093962415
+The mean cross-validated score for cooling efficiency classification using Logistic Regression: 0.9869518859123018 
+
+(quite high, indeed!)
+
+## Learnings: 
+Early on, Random Forests performed exceptionally well over the other models I tested for predicting the  heating and cooling load target features. When I began to use it for classification of 'efficient' versus 'inefficient', cross-validation scores indicated overfitting. This prompted a search for a less complex model for classification. Logistic Regression emerged as a strong candidate. I ultimately found that by combining the two models, I could build an uber simple user interface that anyone could use that would output highly accurate prediction results without mucking about in the code. 
+
+## Stretch goals: 
+* The (model only) notebook should be so easy to use, domain experts should be able to use it even if they don't look at the README.
+* Make a Python file that runs the model in a terminal window.  
+
+
+## Next Steps: 
+Research how to gather the raw data about a structure in the wild and run that new data through this model. Explore ways to add more granular data features to these models. 
+
+
+
+
+
+
+
+
+
+
+## Archive:
+
+
+
 ## Methodology: 
 (Planned as of 7/1/2024) Data cleaning and analysis - including pairplots of the data against the target features, heatmaps of correlations between the features, in-depth analysis of features with identifiable patterns when plotted against the target features, model building, testing, and hyperparameter tuning, and finally sourcing and introducing real-world data into the model. 
 ## Results
@@ -23,9 +65,6 @@ https://www.kaggle.com/datasets/ujjwalchowdhury/energy-efficiency-data-set/data
 (7/1/2024) Continue working on handling multicollinearity, analyze feature importance, experiment with PolynomialFeatures and analyze results, build and evaluate some classification models (Logistic Regression, KNN, RandomForest). 
 
 
-
-
-## Archive:
 
 June 4, 2024
 Original Problem statement: 
