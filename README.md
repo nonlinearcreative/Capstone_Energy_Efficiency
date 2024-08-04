@@ -1,5 +1,7 @@
 # Predicting whether or not a structure is energy efficient based on features in the data. 
 
+# IMPORTANT: There are two notebooks in this repository. One contains the working explorations related to the study, model variations, and analysis visualizations. The other is a 'model only' notebook intended for the end-user. 
+
 
 
 by Jim O'Donnell
